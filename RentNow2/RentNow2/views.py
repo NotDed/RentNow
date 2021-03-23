@@ -5,8 +5,8 @@ from django.shortcuts import render
 
 def home(request):
 
-    #nombre = "Kevin"
-    #apellido = "Tascon"
+    nombre = "Kevin"
+    apellido = "Tascon"
 
     #doc_externo = open('C:/Users/usuario/Desktop/RentNow2/RentNow2/Templates/home.html')
 
@@ -20,14 +20,6 @@ def home(request):
 
     #documento = doc_externo.render({"nombre_persona" : nombre , "apellido_persona" : apellido})
 
-    return render(request, "home.html")#"home.html", {"nombre_persona" : nombre , "apellido_persona" : apellido})
+    return render(request, "home.html", {"nombre_persona" : nombre , "apellido_persona" : apellido})
 
 
-def register(request):
-
-    return render(request, "register.html")
-
-
-def login(request):
-
-    return render(request, "login.html")

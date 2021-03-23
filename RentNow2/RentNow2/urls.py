@@ -1,4 +1,4 @@
-"""RentNow2 URL Configuration
+"""RentNow URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,13 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-#from RentNow2.views import register, login, home
+from django.urls import path
+from RentNow.views import home
+from accounts.views import register, login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('accounts.urls')),
-    
-
-
+    path('', home),
+    path('register/', register),
+    path('login/', login),
 ]
