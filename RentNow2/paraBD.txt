@@ -1,0 +1,20 @@
+python manage.py shell
+
+from nombreApp.models import Clase
+
+#Crear objeto en BD
+objeto1= Clase.objets.create(nombre(nombres en la bd) = 'Kevin', edad(nombres en la bd) = 19)
+
+#modificar objeto en BD
+objeto1.nombre = 'antonio'
+objeto1.save()
+
+#eliminar objeto en BD
+
+objeto2 = Clase.objetcs.get(id=2)
+objeto2.delete()
+
+#select
+lista=Clase.objects.all()
+lista -> muestra lo que hay en la tabla
+lista.query.__str__()
